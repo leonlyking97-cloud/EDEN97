@@ -1,0 +1,1 @@
+function e(e){let t=[...e.closest(`picture`)?.querySelectorAll(`source`)||[]].find(e=>!e.media||window.matchMedia(e.media).matches);if(!t||t.type)return;let n=t.srcset.trim().match(/^([^,\s]+)\s+[1-9]\d*w$/)?.[1];if(n)try{let e=new URL(n,document.baseURI);return e.origin===window.location.origin?e.href:void 0}catch{return}}export{e as t};
